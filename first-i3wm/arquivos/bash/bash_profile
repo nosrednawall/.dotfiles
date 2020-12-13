@@ -1,0 +1,11 @@
+#
+# ~/.bash_profile
+#
+
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+#Path
+export PATH=$PATH:/sbin
+export LANG=pt_BR.utf8
+export CHROME_BIN=/usr/bin/chromium
+export PATH=$PATH:/home/$USER/.local/bin

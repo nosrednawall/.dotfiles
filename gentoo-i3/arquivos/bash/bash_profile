@@ -1,0 +1,19 @@
+#
+# ~/.bash_profile
+#
+
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+#Path
+export FONTCONFIG_PATH=/etc/fonts
+export PATH=$PATH:/sbin
+export LANG=pt_BR.utf8
+export CHROME_BIN=/usr/bin/chromium
+export PATH=$PATH:/home/$USER/.local/bin
+
+# QT5CT theme
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+
+# Path Jupterlab
+export PATH="$HOME/.local/bin:$PATH"

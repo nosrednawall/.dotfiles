@@ -1,0 +1,38 @@
+emerge -auDNtv @world
+emerge -av sys-kernel/gentoo-sources
+emerge -av genkernel
+emerge -av app-admin/sysklogd
+emerge -av sys-process/cronie
+emerge -av net-misc/dhcpcd
+emerge -av linux-firmware
+emerge -av networkmanager
+emerge -av net-tools
+emerge -av sys-boot/grub
+emerge -av sys-kernel/gentoo-sources
+emerge -av sys-fs/dosfstools
+USE="jpeg png" emerge -a xorg-server xorg-x11 xf86-video-vesa xorg-drivers rxvt-unicode i3 i3status gentoolkit dhcpcd imlib2 feh dev-vcs/git 
+emerge -av firefox-bin alsa-lib alsa-tools
+emerge -av rofi
+USE="ptBR" emerge -av feh pasystray picom scrot media-gfx/imagemagick media-fonts/unifont alsa-utils lxappearance qt5ct mpv mpd ncmpcpp playerctl thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs udiskie udisks tumbler qbittorrent cabextract p7zip  unrar unzip zip dialog gtkdialog app-office/libreoffice-bin app-office/libreoffice-l10n xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
+emerge -av pass  app-crypt/gpgme x11-misc/xclip app-crypt/pinentry
+USE="gtk" emerge -av pass  app-crypt/gpgme x11-misc/xclip app-crypt/pinentry
+emerge -av htop
+emerge -av vim
+emerge -av xfce4-terminal
+emerge -a lightdm lightdm-gtk-greeter bash-completion  gucharmap sudo
+USE="i3wm ipc mpd network" emerge x11-misc/polybar
+emerge -av media-fonts/hack
+emerge -av sct
+USE="netgear readynas" emerge -av minidlna
+USE="ntfsdecrypt" emerge -av sys-fs/ntfs3g
+emerge -av media-fonts/terminus-font
+emerge --sync
+emerge --update --ask @world
+emerge --fetchonly minidlna
+emerge --ask minidlna
+emerge --update --deep @world
+emerge --update --deep --with-bdeps=y @world
+emerge -av sys-auth/elogind
+USE="X alsa alsa-plugin dbus elogind equalizer gtk" emerge -av media-sound/pulseaudio
+emerge --ask --changed-use --deep @world
+emerge -av media-sound/pavucontrol

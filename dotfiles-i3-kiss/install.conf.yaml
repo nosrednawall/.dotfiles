@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+# é o que vai fazer o link simbólico
+- link:
+    ~/.config/i3/config:
+      create: true
+      path: arquivos/i3/config.conf
+      relink: true
+      force: true
+    ~/.config/i3exit/i3exit.sh:
+      create: true
+      glob: true
+      path: arquivos/i3exit/i3exit.sh
+      relink: true
+      force: true
+    ~/.config/i3status/status.conf:
+      create: true
+      glob: true
+      path: arquivos/i3status/status.conf
+      relink: true
+      force: true
+    ~/.config/terminator/config:
+      create: true
+      glob: true
+      path: arquivos/terminator/config
+      relink: true
+      force: true
+    
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sudo cp arquivos/i3lock/i3lock-script /bin/lock && sudo chmod +x /bin/lock]
+

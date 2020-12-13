@@ -1,0 +1,70 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+# é o que vai fazer o link simbólico
+- link:
+    ~/.bashrc:
+      relink: true
+      force: true
+      path: arquivos/bashrc
+    ~/.face:
+      relink: true
+      force: true
+      path: arquivos/face.png
+    ~/.face.icon:
+      relink: true
+      force: true
+      path: arquivos/face.png
+    ~/.gitconfig:
+      relink: true
+      force: true
+      path: arquivos/gitconfig
+    ~/.zshrc:
+      relink: true
+      force: true
+      path: arquivos/zshrc
+    ~/.profile:
+      create: true
+      path: arquivos/profile
+      relink: true
+      force: true
+    ~/.nvmrc:
+      create: true
+      path: arquivos/nvmrc
+      relink: true
+      force: true
+    ~/.config/konsolerc:
+      create: true
+      path: arquivos/konsolerc
+      relink: true
+      force: true./ins  
+    ~/.scripts:
+      create: true
+      glob: true
+      path: arquivos/scripts/*
+      relink: true
+      force: true
+    ~/.ssh/config:
+      create: true
+      glob: true
+      path: arquivos/ssh/config
+      relink: true
+      force: true
+    ~/.vimrc:
+      create: true
+      glob: true
+      path: arquivos/vim/vimrc
+      relink: true
+      force: true
+    ~/.vim/colors:
+      create: true
+      glob: true
+      path: arquivos/vim/colors/*
+      relink: true
+      force: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

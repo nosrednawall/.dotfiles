@@ -1,0 +1,65 @@
+#
+# ~/.bashrc
+#
+
+##################
+##### History  ###
+##################
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+
+# Size
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
+source ~/.bash_aliases
+source ~/.bash_functions
+source ~/.bash_profile
+
+##################
+##### Aliases ####
+##################
+if [[ -f ~/.bash_aliases ]]; then
+    source ~/.bash_aliases
+fi
+
+
+##################
+##### Funções ####
+##################
+if [[ -f ~/.bash_functions ]]; then
+    source ~/.bash_functions
+fi
+
+##################
+##### Profile ####
+##################
+if [[ -f ~/.bash_profile ]]; then
+    source ~/.bash_profile
+fi
+
+##################
+##### Prompt #####
+##################
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h: \W]\$ '
+
+if [[ ! -L /tmp/.esd-${UID} ]]; then
+        ln -s /tmp/.esd /tmp/.esd-${UID}
+fi
+
+#fortune chucknorris
+#echo
+export PATH=/home/anderson/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/sbin:/usr/local/scripts/
+export PATH=/home/anderson/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/sbin:/usr/local/scripts/
+
+##################
+##### Sources ####
+##################
+ # Use bash-completion, if available
+if [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]]; then
+	source /usr/share/bash-completion/bash_completion
+fi

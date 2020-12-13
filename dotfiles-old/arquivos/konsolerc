@@ -1,0 +1,25 @@
+[Desktop Entry]
+DefaultProfile=anderson.profile
+
+[Favorite Profiles]
+Favorites=anderson.profile
+
+[KonsoleWindow]
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080[$d]
+Height 768[$d]
+Height 900[$d]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA7wAAAQTAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1366[$d]
+Width 1600[$d]
+Width 1920[$d]
+Window-Maximized 768x1366=false
+Window-Maximized 900x1600=false
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar

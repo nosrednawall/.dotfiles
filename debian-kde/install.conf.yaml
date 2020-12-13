@@ -1,0 +1,60 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+# é o que vai fazer o link simbólico
+- link:
+    # Shell
+    ~/.bashrc:
+      create: true
+      glob: true
+      path: arquivos/bash/bashrc
+      relink: true
+      force:  true
+    ~/.bash_aliases:
+      create: true
+      glob: true
+      path: arquivos/bash/bash_aliases
+      relink: true
+      force:  true
+    ~/.bash_profile:
+      create: true
+      glob: true
+      path: arquivos/bash/bash_profile
+      relink: true
+      force:  true
+    ~/.bash_functions:
+      create: true
+      glob: true
+      path: arquivos/bash/bash_functions
+      relink: true
+      force:  true
+
+    # Face
+    ~/.face:
+      relink: true
+      force: true
+      path: arquivos/face/face.png
+    ~/.face.icon:
+      relink: true
+      force: true
+      path: arquivos/face/face.png
+    
+    # Music on mpd and ncmpcpp
+    ~/.config/mpd:
+      create: true
+      glob: true
+      path: arquivos/mpd/*
+      relink: true
+      force: true
+    ~/.ncmpcpp:
+      create: true
+      glob: true
+      path: arquivos/ncmpcpp/*
+      relink: true
+      force: true
+        
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

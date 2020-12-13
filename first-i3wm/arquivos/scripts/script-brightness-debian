@@ -1,0 +1,10 @@
+
+#Comando para descobrir qual é o cartão de brilho do monitor 
+#/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight/brightness
+
+#Script para colocar em /etc/X11/xorg.conf
+Section "Device"
+        Identifier  "Card0"
+        Driver      "intel"
+        Option      "Backlight"  "intel_backlight"
+EndSection

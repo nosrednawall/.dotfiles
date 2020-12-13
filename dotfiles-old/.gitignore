@@ -1,0 +1,112 @@
+.directory
+# # Ignore everything by default.
+# /*
+# !.config/
+# .config/*
+
+# # Bash stuff (profile just sources bashrc, since it's the only thing sourced
+# # when a shell is a login shell).
+# !.bash*
+# .*.swp
+# .bash_history
+# .bash_local
+# .bash_logout
+# !.profile
+
+# # Zsh
+# !.zshrc
+# !.zsh
+# !.zsh/*
+# !.zsh/contrib
+# !.zsh/contrib/*
+
+# # Do ignore the data directory (my construct, it's where completion cache,
+# # history etc live)
+# .zsh/data
+# .zsh/data/*
+# # Do ignore local/sensitive settings
+# .zsh/local
+# .zsh/pre-local
+# # Swapfiles (sigh)
+# .zsh/*.swp
+
+# # Git aliases, identification info
+# !.gitconfig
+# # The gitignore of this repository itself (!)
+# !.gitignore
+# # My global Git excludes file (acts as a global .gitignore)
+# !.gitexcludes
+
+# # Wallpapers
+# !.wallpapers/*
+
+# # neofetch
+# !.config/neofetch/config
+
+# # terminator
+# !.config/terminator/config
+
+# #i3
+# !.config/i3/*
+# !.config/i3/config
+
+# #polybar
+# !.config/polybar/*
+
+# #Music_theme_kde
+# !.music_theme/
+
+# # Scripts
+# !.scripts/*
+
+# # KDE PLAMA
+# !.config/kwinrc
+
+# # Estudar com cuidado os itens abaixo
+# # .local/share/kxmlgui5/dolphin/dolphinui.rc
+# # .local/share/kxmlgui5/okular/part.rc
+# # .local/share/color-schemes/<something>.colors
+# # .config/lattedockrc
+# # .config/latte/My Layout.layout.latte.REDACTED
+# # .config/breezerc
+# # .config/hardcode-tray.json
+# # .config/kglobalshortcutsrc
+# # .config/krunner-symbolsrc
+# # .config/kwinrc
+# # .xsession
+
+# #Um dia talvez quem sabe 
+# # Vim plugins, ftplugins, syntax etc etc
+# # !.vim
+# # !.vim/*
+# # !.vim/*/*
+# # !.vim/*/*/*
+# # !.vim/*/*/*/*
+# # !.vim/*/*/*/*/*
+# # !.vim/*/*/*/*/*/*
+
+# # Do ignore netrw history
+# # .vim/.netrwhist
+# # # Do ignore vim-plug stuff, sigh
+# # .vim/plugged
+# # 
+# # # Vim settings
+# # !.vimrc
+# # 
+# # # Ignore swapfiles
+# # .vim/.*.swp
+# # .vim/*/.*.swp
+# # .vim/*/*/.*.swp
+# # .vim/*/*/*/.*.swp
+
+# # # Screen, tmux
+# # !.screenrc
+# # !.tmux.conf
+# # !.tmux
+# # !.tmux/*.yml
+
+# # # Gem config
+# # !.gemrc
+
+
+

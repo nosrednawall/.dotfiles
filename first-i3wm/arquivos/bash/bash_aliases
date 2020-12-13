@@ -1,0 +1,45 @@
+#
+# ~/.bash_alias
+#
+
+# Music
+alias mocp='mocp -T transparent-background'
+
+# Apt
+alias upgrade='sudo apt update && sudo apt upgrade -y'
+alias install='sudo apt install'
+alias search='sudo apt search'
+alias purge='sudo apt purge'
+alias autoremove='sudo apt autoremove'
+
+# Dotfiles
+alias dotfiles_backup='cd ~/.dotfiles && git add . && git commit -m "backup automático" && git push && cd ~'
+
+# Git
+alias commit='git add . && git commit -m'
+alias push='git push'
+
+# Busy
+alias busy1='my_file=$(find /usr/include -type f | sort -R | head -n 1); my_len=$(wc -l $my_file | awk "{print $1}"); let "r = $RANDOM % $my_len" 2>/dev/null; vim +$r $my_file'
+alias busy2='for i in `seq 0 100`;do timeout 6 dialog --gauge "Install..." 6 40 "$i";done'
+alias busy3='cat /dev/urandom | hexdump -C | grep "ca fe"'
+
+# Main
+alias rehash='source ~/.bashrc && source ~/.bash_aliases && source ~/.bash_functions'
+alias lixo='dd if=/dev/zero of=file.txt count=1024 bs=1048576'
+alias rm='rm -Iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ufw='sudo ufw'
+alias copiar='xclip -sel clip <'
+alias e='exit'
+alias s='sudo su'
+alias mkdir='mkdir -pv'
+alias neofetch='neofetch --config ~/.neofetch.conf'
+alias baixarmp3='youtube-dl --extract-audio --audio-format mp3'
+alias baixarlista='youtube-dl --extract-audio --username nosrednawall --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias vim="vim -c 'startinsert'"
+
+# Minidlna
+alias startdlna='sudo systemctl start minidlna.service'
+alias stopdlna='sudo systemctl stop minidlna.service'

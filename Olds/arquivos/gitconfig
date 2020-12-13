@@ -1,0 +1,7 @@
+[user]
+	email = nosrednawall@gmail.com
+	name = nosrednawall
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff

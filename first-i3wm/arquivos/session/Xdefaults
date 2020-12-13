@@ -1,0 +1,37 @@
+#######################
+# Configs
+######################
+URxvt*transparent: true
+URxvt*shading: 20
+URxvt*saveLines: 12000
+URxvt*foreground: Grey
+URxvt*scrollBar: true
+URxvt*scrollBar_right: false
+URxvt*scrollstyle: plaind
+
+#Xterm*VT100.selectToClipboard: true
+#Xterm*VT100.translations: #override \
+#Shift<BtnUp>: select-end(CLIPBOARD) \n\
+
+Xterm*VT100.selectToClipboard: true
+Xterm*VT100.translations: #override \
+      Shift<BtnUp>: select-end(CLIPBOARD) \n\
+      <Ctrl>V: insert-selection(CLIPBOARD,CUT_BUFFER0) 
+
+####################
+# Fonts
+###################
+#URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+#URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+URxvt*font: xft:terminus:pixelsize=14
+URxvt*boldFont: xft:terminus:bold:pixelsize=14
+
+#config for Archlinux
+#URxvt.font:xft:xos4 Terminus:size=12
+#URxvt.boldFont:xft:xos4 Terminus:size=12
+#################
+# Colors
+################
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlued
+TERM=rxvt-unicode-256color

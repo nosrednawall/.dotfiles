@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# This script is run as root before showing login widget.
+
+xsetroot -solid rgb:0/0/0
+#/usr/bin/qiv -zr /usr/local/share/backgrounds/wallpaper.jpg
+
+#xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg.xpm
+#xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg-bw.xpm

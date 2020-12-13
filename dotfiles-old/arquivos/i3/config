@@ -1,0 +1,309 @@
+########################
+##### Tecla Mod e Sup
+########################
+set $mod Mod4
+set $sup Mod1
+
+########################
+##### Cores
+########################
+
+#                       colour of border      background      text        indicator   child_border
+client.focused			#bf616a               #2f343f         #d8dee8     #bf616a     #d8dee8
+client.focused_inactive	#2f343f               #2f343f         #d8dee8     #2f343f     #2f343f
+client.unfocused		#2f343f               #2f343f         #d8dee8     #2f343f     #2f343f
+client.urgent			#2f343f               #2f343f         #d8dee8     #2f343f     #2f343f
+client.placeholder		#2f343f               #2f343f         #d8dee8     #2f343f     #2f343f
+client.background		#2f343f
+
+########################
+##### Atalhos
+########################
+
+# start a terminal
+bindsym $mod+Return exec terminator
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# rofi
+bindsym $mod+r exec rofi -show run
+
+# dmenu
+bindsym $mod+d exec i3-dmenu-desktop
+
+# file-manager
+bindsym $sup+f exec thunar
+
+# e-mail
+bindsym $sup+e exec thunderbird
+
+# music
+bindsym $sup+m exec spotify
+
+# internet 
+bindsym $sup+i exec chromium
+
+###############
+# inicialização
+###############
+exec --no-startup-id feh --bg-fill /home/$USER/.wallpaper/wallpaper09.png
+exec --no-startup-id compton & --config ~/.config/compton.conf
+exec --no-startup-id pasystray &
+exec --no-startup-id parcellite &
+exec --no-startup-id albert &
+
+#########################
+# Screenlock
+########################
+# auto iniciar screenlock
+exec xautolock -time 10 -locker /bin/lock
+#atalho para screenlock
+bindsym Control+$sup+l exec /bin/lock 
+
+######################
+# Pulse Audio controls
+######################
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+############################
+# Sreen brightness controls
+###########################
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+#######################
+# Media player controls
+######################
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+########################
+# Atalhos personalizados
+########################
+# Aplications for coding
+set $mode_dev Dev (e) eclipse, (c) code, (a) arduino, (f) fritzing
+mode "$mode_dev" {
+    bindsym c exec code, mode "default"
+    bindsym e exec ~/Desenvolvimento/IDEs/eclipse/eclipse, mode "default"
+    bindsym a exec ~/.programas/arduino/arduino, mode "default"
+    bindsym f exec ~/.programas/fritzing/fritzing, mode "default"
+    
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+d mode "$mode_dev"
+
+# Aplications for internet
+set $mode_internet Internet (g) oogle Chrome, (c) hromium, (f) irefox, (t) rello, (j) downloader
+mode "$mode_internet" {
+    bindsym g exec google-chrome-stable --password-store="gnome" , mode "default"
+    bindsym c exec chromium --password-store="gnome" , mode "default"
+    bindsym f exec firefox , mode "default"
+    bindsym t exec google-chrome-stable --password-store="gnome" --app="https://trello.com/" , mode "default"
+    bindsym j exec jdownloader , mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+i mode "$mode_internet"
+
+# Aplications for chat
+set $mode_chat Chat (t) elegram, (w) hatsapp Chrome, (f) whatsapp Firefox
+mode "$mode_chat" {
+    bindsym t exec /opt/Telegram/Telegram  , mode "default"
+    bindsym w exec chromium --password-store="gnome" --app="https://web.whatsapp.com/" , mode "default"
+    bindsym f exec firefox --new-tab="https://web.whatsapp.com/" , mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+c mode "$mode_chat"
+
+# PrintScreen
+bindsym Print exec spectacle -f
+bindsym Shift+Print exec spectacle -a
+bindsym $mod+Shift+Print exec spectacle -r
+
+########################
+##### Bar
+########################
+bar {
+  status_command i3status --config ~/.config/i3status/desktop.conf
+  font pango:Economica 8, feather 9, Awesome 8
+    colors {
+        background #2f343f
+        statusline #2f343f
+        separator #4b5262
+
+		# colour of border, background, and text
+        focused_workspace	#2f343f	#bf616a	#d8dee8
+        active_workspace	#2f343f	#2f343f	#d8dee8
+        inactive_workspace	#2f343f	#2f343f	#d8dee8
+        urgent_workspace	#2f343f	#ebcb8b	#2f343f
+    }
+}
+
+
+
+########################
+##### Workspaces
+########################
+# Quantidade
+set $w1 1 Home
+set $w2 2 Code
+set $w3 3 Web
+set $w4 4 Term
+set $w5 5 Office
+set $w6 6 Misc
+
+# Mudança de workspace
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+bindsym $mod+6 workspace $w6
+
+# switch to next/prev workspace
+bindsym $sup+Right workspace next
+bindsym $sup+Left  workspace prev
+bindsym $sup+Up    workspace back_and_forth
+workspace_auto_back_and_forth yes
+bindsym $sup+Tab [urgent=latest] focus
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+
+########################
+##### Usabilidade do I3
+########################
+
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# # Sinceramente não uso
+# # focus the parent container
+# bindsym $mod+a focus parent
+# # focus the child container
+# bindsym $mod+d focus child
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id sh ~/.config/i3exit/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id sh ~/.config/i3exit/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id sh ~/.config/i3exit/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id sh ~/.config/i3exit/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id sh ~/.config/i3exit/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id sh ~/.config/i3exit/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "$mode_system"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+
+  bindsym j resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym l resize shrink height 10 px or 10 ppt
+  bindsym ccedilla resize grow width 10 px or 10 ppt
+
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $sup+r mode "resize"
+
+########################
+##### font
+########################
+# Fonts do sistema
+font pango:monospace 8, FontAwesome 8, Noto Sans 8
+
+####################################
+# Fixando aplicações em workspaces
+####################################
+# assign    [class="Chromium"]                $w3
+# assign    [class="Code"]                    $w2
+# assign    [class="Telegram"]                $w6
+# assign    [class="Trello"]                  $w5
+# assign    [class="Kmail"]                   $w5
+# assign    [class="Dolphin"]                 $w5
+# assign    [class="Spotify"]                 $w6
+# assign    [class="Eclipse"]                 $w2
+# assign    [class="i3-sensible-terminal"]    $w4
+# assign    [class="gnome-terminal"]          $w4
+# assign    [class="thunderbird"]             $w1
+
+

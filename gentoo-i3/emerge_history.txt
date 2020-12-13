@@ -1,0 +1,29 @@
+   41  emerge -av sys-kernel/gentoo-sources
+   42  emerge -av genkernel
+   51  emerge -av app-admin/sysklogd
+   52  emerge -av sys-process/cronie
+   53  emerge -av net-misc/dhcpcd
+   57  emerge -av linux-firmware
+   58  emerge -av networkmanager
+   61  emerge -av net-tools
+   63  emerge -av sys-boot/grub
+  125  emerge -av sys-kernel/gentoo-sources
+  149  emerge -av sys-fs/dosfstools
+  235  emerge -av firefox-bin alsa-lib alsa-tools
+  237  emerge -av rofi
+  256  USE="ptBR" emerge -av feh pasystray picom scrot media-gfx/imagemagick polybar media-fonts/unifont alsa-utils lxappearance qt5ct mpv mpd ncmpcpp playerctl thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs udiskie udisks tumbler qbittorrent cabextract p7zip  unrar unzip zip dialog gtkdialog app-office/libreoffice-bin app-office/libreoffice-l10n xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
+  273  USE="gtk" emerge -av pass  app-crypt/gpgme x11-misc/xclip app-crypt/pinentry
+  277  emerge -av htop
+  280  emerge -av vim
+  281  emerge -av xfce4-terminal
+  291  emerge -av media-fonts/hack
+  293  emerge -av sct
+  296  USE="netgear readynas" emerge -av minidlna
+  298  USE="ntfsdecrypt" emerge -av sys-fs/ntfs3g
+  300  emerge -av xfce4-terminal
+  310  emerge -av media-fonts/hack
+  312  emerge -av sct
+  320  emerge -av media-fonts/terminus-font
+  383  emerge -av sys-auth/elogind
+  396  USE="X alsa alsa-plugin dbus elogind equalizer gtk" emerge -av media-sound/pulseaudio
+  398  emerge -av media-sound/pavucontrol

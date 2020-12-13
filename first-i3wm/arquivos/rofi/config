@@ -1,0 +1,8 @@
+configuration {
+  theme: "dark";
+  modi: "window,drun,run,ssh";
+  show-icons: true;
+  drun-icon-theme: "Arc";
+  levenshtein-sort: true;
+  click-to-exit: true;
+}

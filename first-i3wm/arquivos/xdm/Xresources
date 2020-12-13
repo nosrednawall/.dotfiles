@@ -1,0 +1,56 @@
+####################
+# Configs  (╯°□°)╯
+###################
+xlogin.Login.greeting:            Nai wa!
+xlogin.Login.unsecureGreeting:
+xlogin.Login.fail:                Fail.
+xlogin.Login.changePasswdMessage: Change.
+xlogin.Login.namePrompt:          User:
+xlogin.Login.passwdPrompt:        Password:
+xlogin.Login.echoPasswd:          true
+xlogin.Login.borderWidth:	        0
+
+####################
+# Color
+###################
+xlogin.Login.background:          black
+xlogin.Login.foreground:          white
+xlogin.Login.failColor:           #cccccc
+xlogin.Login.inpColor:            black
+xlogin.Login.promptColor:         #aaaaaa
+
+####################
+# Font
+###################
+xlogin.Login.face:                courier:size=13:style=Bold
+xlogin.Login.failFace:            courier:size=13:style=Bold
+xlogin.Login.promptFace:          courier:size=13:style=Normal
+xlogin.Login.greetFace:           courier:size=13
+
+####################
+# Theme cursor
+###################
+Xcursor.theme:                    breeze
+
+####################
+# Widget
+###################
+xlogin*borderWidth:                1
+xlogin*frameWidth:                 5
+xlogin*innerFramesWidth:           2
+xlogin*shdColor:                 grey30
+xlogin*hiColor:                  grey90
+xlogin*background:               grey
+!xlogin*foreground:              darkgreen
+xlogin*greetColor:               Blue3
+xlogin*failColor:                red
+*Foreground:                     black
+*Background:                     #fffff0
+xlogin.Login.width:               800
+
+####################
+# Image kumoko (」ﾟﾛﾟ)｣
+###################
+xlogin*logoFileName: /usr/share/X11/xdm/pixmaps/komoko.xpm
+xlogin*useShape:                 true
+xlogin*logoPadding:               10
