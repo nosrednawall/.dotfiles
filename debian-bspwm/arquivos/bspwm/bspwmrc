@@ -23,8 +23,7 @@ bspc rule -a Screenkey manage=off
 xsetroot -cursor_name left_ptr &
 
 $HOME/.config/polybar/launch.sh
-feh --bg-fill --randomize -r /home/$USER/.wallpapers/*
-$HOME/.config/bspwm/screenlayout.sh
+$HOME/.config/bspwm/starttup.sh
 
 
 bspc config normal_border_color "#D358F7"

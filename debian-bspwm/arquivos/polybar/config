@@ -28,7 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/monitor_principal]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = HDMI-1
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -83,7 +83,7 @@ cursor-scroll = ns-resize
 ;_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [bar/monitor_secundario]
-monitor = ${env:MONITOR:VGA-1}
+monitor = VGA-1
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -110,9 +110,9 @@ font-0 = fa-brands-400:pixelsize=10;1
 font-1 = MaterialIcons-Regular:size=10;1
 font-2 = "FuraCode Nerd Font Mono":pixelsize=10;1
 
-modules-left = powermenu xkeyboard bspwm
+modules-left = bspwm
 modules-center = xwindow 
-modules-right = gmail filesystem xbacklight alsa memory cpu battery temperature date
+modules-right = date
 
 tray-position = right
 tray-padding = 2
@@ -138,14 +138,6 @@ cursor-scroll = ns-resize
 ;#####################################################################
 ;############# Modules
 ;#####################################################################
-
-
-
-
-
-
-
-
 
 
 [module/xwindow]
@@ -198,7 +190,14 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
-; label-separator = |
+;label-separator = |
+pin-workspaces = true
+
+enable-click = true
+
+enable-scroll = true
+
+
 
 [module/i3]
 type = internal/i3
