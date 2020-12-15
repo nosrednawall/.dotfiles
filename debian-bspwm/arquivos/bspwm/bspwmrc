@@ -2,9 +2,11 @@
 
 sxhkd &
 
-#bspc monitor -d I II III IV V VI VII VIII IX X
-bspc monitor VGA-1 -d 1 2 3 4 5
-bspc monitor HDMI-1 -d 6 7 8 9 0
+bspc monitor VGA-1 -d I II III IV
+bspc monitor HDMI-1 -d V VI VII VIII
+
+#bspc monitor VGA-1 -d 1 2 3 4 5
+#bspc monitor HDMI-1 -d 6 7 8 9 0
 
 
 bspc config border_width         2
@@ -23,8 +25,8 @@ bspc rule -a Screenkey manage=off
 xsetroot -cursor_name left_ptr &
 
 $HOME/.config/polybar/launch.sh
-$HOME/.config/bspwm/starttup.sh
-
+$HOME/.config/bspwm/startup.sh
+compton &
 
 bspc config normal_border_color "#D358F7"
 bspc config active_border_color "#2E64FE"
