@@ -33,7 +33,7 @@ alert = #bd2c40
 [bar/top_principal]
 monitor = HDMI-1
 width = 100%
-height = 20
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -88,7 +88,7 @@ cursor-scroll = ns-resize
 [bar/top_secundario]
 monitor = VGA-1
 width = 100%
-height = 20
+height = 30  
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -195,7 +195,7 @@ inline-mode = false
 
 ; Create click handler used to focus workspace
 ; Default: true
-enable-click = false
+enable-click = true
 
 ; Create scroll handlers used to cycle workspaces
 ; Default: true

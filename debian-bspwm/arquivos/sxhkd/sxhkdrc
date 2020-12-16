@@ -11,7 +11,7 @@ super + @space
 	dmenu_run
 
 super + d
-	rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme solarized -font "hack 10"
+	rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme glue_pro_blue -font "hack 10"
 
 # make sxhkd reload its configuration files:
 super + Escape
