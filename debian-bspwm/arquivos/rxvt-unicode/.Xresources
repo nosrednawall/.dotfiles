@@ -19,6 +19,7 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+
 ! URxvt Appearance
 #define FONT SF Mono
 #define FONT_SIZE 9
@@ -41,7 +42,7 @@ URxvt.urgentOnBell: true
 URxvt.iso14755: false
 URxvt.transparent: false
 URxvt.depth: 32
-URxvt.background: [50]#000000 
+URxvt.background: [75]#000000 
 
 
 !! Common Keybinds for Navigations
