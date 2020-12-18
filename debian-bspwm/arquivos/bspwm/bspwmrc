@@ -2,8 +2,8 @@
 
 sxhkd &
 
-bspc monitor VGA-1 -d I II III IV
-bspc monitor HDMI-1 -d V VI VII VIII
+bspc monitor VGA-1 -d I II
+bspc monitor HDMI-1 -d III IV V VI VII VIII
 
 #bspc monitor VGA-1 -d 1 2 3 4 5
 #bspc monitor HDMI-1 -d 6 7 8 9 0

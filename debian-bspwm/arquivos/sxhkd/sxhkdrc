@@ -13,6 +13,10 @@ super + @space
 super + d
 	rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme glue_pro_blue -font "hack 10"
 
+control + alt + l
+	exec /bin/v3lock
+
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && $HOME/.config/polybar/launch.sh
