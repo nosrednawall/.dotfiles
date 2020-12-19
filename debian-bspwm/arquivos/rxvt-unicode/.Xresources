@@ -60,6 +60,10 @@ URxvt.underlineURLs: true
 URxvt.urlButton: 1
 URxvt.font-size.step: 1
 
+!! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
 !! Xterm
 xterm*faceName: FONT
 xterm*faceSize: FONT_SIZE

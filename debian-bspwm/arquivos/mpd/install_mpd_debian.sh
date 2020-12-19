@@ -39,7 +39,7 @@ meson . output/release --buildtype=debugoptimized -Db_ndebug=true
 ninja -C output/release
 sudo ninja -C output/release install
 
-mkdir -p ~/.config/mpd
+mkdir -p ~/.config/mpd/playlists
 cd ~/.config/mpd
 touch database mpd.fifo mpd.log mpd.pid mpdstate socket
 ln -s /home/anderson/.dotfiles/debian-bspwd/arquivos/mpd/config /home/anderson/.config/mpd/config
