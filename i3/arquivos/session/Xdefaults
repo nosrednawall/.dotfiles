@@ -1,0 +1,34 @@
+#######################
+# Configs
+######################
+URxvt*transparent: true
+URxvt*shading: 20
+URxvt*saveLines: 12000
+URxvt*foreground: Grey
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollstyle: plaind
+
+#URxvt.keysym.Control-Meta-c: builtin-string:
+#URxvt.keysym.Control-Meta-v: builtin-string:
+
+#URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+#URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+####################
+# Fonts
+###################
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+#URxvt*font: xft:terminus:pixelsize=14
+#URxvt*boldFont: xft:terminus:bold:pixelsize=14
+
+#config for Archlinux
+#URxvt.font:xft:xos4 Terminus:size=12
+#URxvt.boldFont:xft:xos4 Terminus:size=12
+#################
+# Colors
+################
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlued
+TERM=rxvt-unicode-256color
