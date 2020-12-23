@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/etc/bash
 
 ## Add this to your wm startup file.
 
@@ -9,14 +9,25 @@ pkill -x polybar
 # Wait until the processes have been shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
-# Launch bar1 and bar2
-DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
-[ ! -z "$DISPLAY1" ] && MONITOR="$DISPLAY1" polybar top1 &
-[ ! -z "$DISPLAY1" ] && MONITOR="$DISPLAY1" polybar bottom1 &
+# variaveis
+VOID='NAME="void"';
+OS="$(cat /etc/os-release | grep '^NAME=')";
 
-#DISPLAY2="$(xrandr -q | grep 'HDMI1\|DVI-I-1' | cut -d ' ' -f1)"
-#[ ! -z $DISPLAY2 ] && MONITOR=$DISPLAY2 polybar top2 &
-#[ ! -z $DISPLAY2 ] && MONITOR=$DISPLAY2 polybar bottom2 &
+# verifica se é o notebook ou o desktop
+case "$OS" in
+  "$VOID")
+    # caso seja o note verifica se o mesmo está com dois monitores e aplica as
+    # configuracoes de cada um
+    DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
+    [ ! -z "$DISPLAY1" ] && MONITOR="$DISPLAY1" polybar -c ~/.config/polybar/notebook/config.ini top1 &
+    [ ! -z "$DISPLAY1" ] && MONITOR="$DISPLAY1" polybar -c ~/.config/polybar/notebook/config.ini bottom1 &
 
-# Launch bar1 and bar2
-#polybar -c ~/.config/polybar/config main &
+    DISPLAY2="$(xrandr -q | grep 'HDMI1' | cut -d ' ' -f1)"
+    [ ! -z "$DISPLAY2" ] && MONITOR="$DISPLAY2" polybar -c ~/.config/polybar/notebook/config.ini top2 &
+    [ ! -z "$DISPLAY2" ] && MONITOR="$DISPLAY2" polybar -c ~/.config/polybar/notebook/config.ini bottom2 &
+  ;;
+  *)
+    # caso nao seja é o desktop
+  ;;
+
+esac
