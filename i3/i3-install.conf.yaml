@@ -9,10 +9,16 @@
     # I3
     ~/.config/i3/config:
       create: true
-      path: i3/arquivos/i3/config
+      path: i3/arquivos/i3/config.ini
       relink: true
       force: true
-   
+
+    ~/.config/i3/startup.sh:
+       create: true
+       path: i3/arquivos/i3/startup.sh
+       relink: true
+       force: true
+      
     # Session
     ~/.xinitrc:
       create: true
@@ -141,8 +147,17 @@
       path: i3/arquivos/xfce-terminal/*
       relink: true
       force: true
-
+- create:
+        - ~/Downloads
+        - ~/Imagens
+        - ~/Documentos
+        - ~/Desktop
+        - ~/Músicas
+        - ~/Vídeos
+        - ~/.fonts
+        - ~/Imagens/Screenshots
+        - ~/.config/mpd/playlists
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
+  - [cd ~/.config/mpd ; touch database mpd.fifo mpd.log mpd.pid mpdstate socket]
 

@@ -28,6 +28,11 @@ case "$OS" in
   ;;
   *)
     # caso nao seja é o desktop
+    DISPLAY3="$(xrandr -q | grep 'HDMI-1' | cut -d ' ' -f1)"
+    [ ! -z "$DISPLAY3" ] && MONITOR="$DISPLAY3" polybar -c ~/.config/polybar/desktop/config.ini main_desktop &
+
+    DISPLAY4="$(xrandr -q | grep 'VGA-1' | cut -d ' ' -f1)"
+    [ ! -z "$DISPLAY4" ] && MONITOR="$DISPLAY4" polybar -c ~/.config/polybar/desktop/config.ini second_desktop &
   ;;
 
 esac
