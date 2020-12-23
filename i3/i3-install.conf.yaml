@@ -155,7 +155,7 @@
         - ~/Músicas
         - ~/Vídeos
         - ~/.fonts
-        - ~/Imagens/Screenshots
+        - ~/Imagens/Screenshoots
         - ~/.config/mpd/playlists
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
