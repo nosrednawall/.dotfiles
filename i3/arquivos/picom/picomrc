@@ -17,7 +17,7 @@ shadow-exclude = [
     "class_g = 'Xfwm4'",
     "class_g = 'firefox' && window_type = 'utility'",
     "_GTK_FRAME_EXTENTS@:c",
-    "name = 'XOSD'",
+    "name = 'XOSD'"
     # "!class_g", # trying to catch weird non-windows
     # "bounding_shaped && !rounded_corners",
     # "window_type = 'normal' && !I3_FLOATING_WINDOW@:c",
@@ -44,7 +44,8 @@ unredir-if-possible-exclude = [
     "_NET_WM_BYPASS_COMPOSITOR@:c = 2",
     "class_g = 'MComix'",
     "class_g = 'vlc'",
-     "class_g = 'Firefox'",
+    "class_g = 'Firefox'",
+    "class_g = 'mpv'"
     # "class_g = 'Nightly'",
 ];
 

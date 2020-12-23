@@ -46,4 +46,4 @@ xrdb -merge ~/.Xresources
 #xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
 
 #Iniciar o i3
-exec dbus-launch i3 
+exec i3 
