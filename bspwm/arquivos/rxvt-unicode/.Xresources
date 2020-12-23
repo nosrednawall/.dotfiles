@@ -21,28 +21,50 @@
 
 
 ! URxvt Appearance
-#define FONT SF Mono
-#define FONT_SIZE 9
-URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true
+!define FONT SF Mono
+!define FONT_SIZE 9
+!URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
+!URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
+!URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
+!URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
+!URxvt.letterSpace: 0
+!URxvt.lineSpace: 0
+!URxvt.geometry: 80x24
+! URxvt.geometry: 75x20
+!URxvt.internalBorder: 5 
+!URxvt.cursorBlink: true
+!URxvt.cursorUnderline: true
+!URxvt.saveline: 2048
+!URxvt.scrollBar: false
+!URxvt.scrollBar_right: false
+!URxvt.urgentOnBell: true
+! URxvt.depth: 32
+!URxvt.iso14755: false
+!URxvt.transparent: false
+!URxvt.depth: 32
+
+
+
+!! URxvt Appearance
+URxvt.font: xft:Hack:style=Regular:size=10
+URxvt.boldFont: xft:Hack:style=Bold:size=10
+URxvt.italicFont: xft:Hack:style=Italic:size=10
+URxvt.boldItalicfont: xft:Hack:style=Bold Italic:size=10
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-URxvt.geometry: 80x24
-! URxvt.geometry: 75x20
-URxvt.internalBorder: 5 
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
 URxvt.cursorBlink: true
-URxvt.cursorUnderline: true
+URxvt.cursorUnderline: false
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
-! URxvt.depth: 32
+URxvt.depth: 24
 URxvt.iso14755: false
-URxvt.transparent: false
-URxvt.depth: 32
-URxvt.background: [75]#000000 
+URxvt.transparent: true
+URxvt.shading: 20
+!URxvt.background: [75]#000000 
 
 
 !! Common Keybinds for Navigations
@@ -61,7 +83,6 @@ URxvt.urlButton: 1
 URxvt.font-size.step: 1
 
 !! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
 
 !! Xterm
