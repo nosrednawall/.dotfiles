@@ -11,5 +11,6 @@ export CHROME_BIN=/usr/bin/chromium
 export PATH=$PATH:/home/$USER/.local/bin
 
 # QT5CT theme
+#export QT_STYLE_OVERRIDE=adwaita
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
