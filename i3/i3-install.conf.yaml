@@ -40,7 +40,13 @@
 
     ~/.Xdefaults:
       create: true
-      path: i3/arquivos/session/Xdefaults
+      path: i3/arquivos/session/Xresources
+      relink: true
+      force: true
+    
+    ~/.Xresources:
+      create: true
+      path: i3/arquivos/session/Xresources
       relink: true
       force: true
 

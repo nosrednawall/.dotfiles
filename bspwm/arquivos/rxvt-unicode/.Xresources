@@ -1,4 +1,8 @@
-!#include ".cache/colorer/Xresources"
+! #########################
+! # URxvt Appearance
+! #########################
+
+! Colors
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36
@@ -19,38 +23,18 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+! Fonts
+#define font1         Inconsolata for Powerline
+#define font2         Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete
+#define font3         DejaVu Sans Mono Nerd Font
+#define font4         Noto Sans Mono CJK JP
 
-! URxvt Appearance
-!define FONT SF Mono
-!define FONT_SIZE 9
-!URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-!URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-!URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-!URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Hack:size=11
-!URxvt.letterSpace: 0
-!URxvt.lineSpace: 0
-!URxvt.geometry: 80x24
-! URxvt.geometry: 75x20
-!URxvt.internalBorder: 5 
-!URxvt.cursorBlink: true
-!URxvt.cursorUnderline: true
-!URxvt.saveline: 2048
-!URxvt.scrollBar: false
-!URxvt.scrollBar_right: false
-!URxvt.urgentOnBell: true
-! URxvt.depth: 32
-!URxvt.iso14755: false
-!URxvt.transparent: false
-!URxvt.depth: 32
+URxvt*font:           xft:font1:pixelsize=16, xft:font2:pixelsize=14:minspace=false, xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*boldFont:       xft:font1:bold:pixelsize=16, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*italicFont:     xft:font1:italic:pixelsize=16, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=16, xft:font2:pixelsize=14:minspace=False, xft:font3:pixelsize=14, xft:font4:pixelsize=14
 
-
-
-!! URxvt Appearance
-URxvt.font: xft:Hack:style=Regular:size=10
-URxvt.boldFont: xft:Hack:style=Bold:size=10
-URxvt.italicFont: xft:Hack:style=Italic:size=10
-URxvt.boldItalicfont: xft:Hack:style=Bold Italic:size=10
-URxvt.letterSpace: 0
+URxvt.letterSpace: 1
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 24
@@ -64,8 +48,6 @@ URxvt.depth: 24
 URxvt.iso14755: false
 URxvt.transparent: true
 URxvt.shading: 20
-!URxvt.background: [75]#000000 
-
 
 !! Common Keybinds for Navigations
 URxvt.keysym.M-k: command:\033]720;1\007
@@ -86,17 +68,17 @@ URxvt.font-size.step: 1
 URxvt.perl-ext-common: default,clipboard
 
 !! Xterm
-xterm*faceName: FONT
-xterm*faceSize: FONT_SIZE
-xterm*internalBorder: 32
-xterm*font: 9x15
-xterm*termName: xterm-256color
+!xterm*faceName: FONT
+!xterm*faceSize: FONT_SIZE
+!xterm*internalBorder: 32
+!xterm*font: 9x15
+!xterm*termName: xterm-256color
 
-Xft.autohint: 0
-Xft.antialias: 1
-Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.dpi: 96
-Xft.rgba: rgb
-Xft.lcdfilter: lcddefault
+!Xft.autohint: 0
+!Xft.antialias: 1
+!Xft.hinting: true
+!Xft.hintstyle: hintslight
+!Xft.dpi: 96
+!Xft.rgba: rgb
+!Xft.lcdfilter: lcddefault
 

@@ -14,3 +14,8 @@ export PATH=$PATH:/home/$USER/.local/bin
 #export QT_STYLE_OVERRIDE=adwaita
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
+
+# para o VIM
+export TERM=xterm-256color
+export COLORTERM=truecolor
+export COLORFGBG="15;0"
