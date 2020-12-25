@@ -24,8 +24,8 @@
 *.color15:    #E6E6E6
 
 ! Fonts
-#define font1         Inconsolata\ for\ Powerline
-#define font2         Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete
+#define font1         FantasqueSansMono\ Nerd\ Font\ Mono
+#define font2         Hack\ Nerd\ Font\ Mono
 #define font3         DejaVu\ Sans\ Mono\ Nerd\ Font
 #define font4         Noto\ Sans\ Mono\ CJK\ JP
 
