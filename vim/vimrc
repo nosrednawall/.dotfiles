@@ -59,15 +59,15 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 " Font para o nerdtree
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:style=Regular:h12
-set guifont=FantasqueSansMono\ Nerd\ Font\ Monoi:h12
+set guifont=DroidSansMono\ Nerd\ Font\ Mono:style=Regular:h12
+"set guifont=FantasqueSansMono\ Nerd\ Font\ Monoi:h12
 
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0
-let g:airline_theme='base16_twilight'
+let g:airline_theme='tender'
 
 let g:airline#extensions#tabline#formatter = 'default'
 " navegação entre os buffers

@@ -58,9 +58,13 @@ ln -s vimrc ~/.vimrc
 # Instala a font usada
 mkdir -p /home/$USER/.local/share/fonts
 cd /home/$USER/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
-7z e FantasqueSansMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
+7z e DroidSansMono.zip
 fc-cache
+
+#wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip
+#7z e FantasqueSansMono.zip
+#fc-cache
 
 # Instale as extencoes de linguagens que eu uso
 # Abra o VIM
