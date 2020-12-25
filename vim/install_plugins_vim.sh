@@ -1,9 +1,23 @@
 #!/bin/bash
 PATH_PADRAO="$(pwd)"
 #primeiro instala o vim
-sudo apt install vim git 7z python3-pip
-sudo pip3 install flake8 pylint
-sudo pip3 install jedi-language-server
+VOID='NAME="void"';
+OS="$(cat /etc/os-release | grep '^NAME=')";
+
+# verifica se é o notebook ou o desktop
+case "$OS" in
+  "$VOID")
+    sudo xbps-install vim git p7zip python3-pip
+    sudo pip install flake8 pylint jedi-language-server
+  ;;
+  *)
+    # caso nao seja é o desktop
+    sudo apt install vim git 7z python3-pip
+    sudo pip3 install flake8 pylint
+    sudo pip3 install jedi-language-server
+  ;;
+esac
+
 sudo npm install -g eslint
 
 # Cria as pastas
@@ -38,6 +52,7 @@ cd $PATH_PADRAO
 ln -s coc.nvimrc ~/.vim/coc.nvimrc
 
 # Faz link sinbolico do vimrc
+rm ~/.vimrc
 ln -s vimrc ~/.vimrc
 
 # Instala a font usada
@@ -50,5 +65,5 @@ fc-cache
 # Instale as extencoes de linguagens que eu uso
 # Abra o VIM
 # E Digite o comando abaixo
-:CocInstall coc-tsserver coc-json coc-html coc-css coc-python coc-jedi coc-sh coc-snippets coc-git coc-java 
+#:CocInstall coc-tsserver coc-json coc-html coc-css coc-python coc-jedi coc-sh coc-snippets coc-git coc-java 
 
