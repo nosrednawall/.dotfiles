@@ -19,9 +19,9 @@ if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
-##################
-##### Sources ####
-##################
+##########################
+##### Bash-Completion ####
+##########################
  # Use bash-completion, if available
 if [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]]; then
 	source /usr/share/bash-completion/bash_completion
@@ -35,10 +35,17 @@ if [[ -f ~/.bash_functions ]]; then
 fi
 
 ##################
-##### Funções ####
+##### Profile ####
 ##################
 if [[ -f ~/.bash_profile ]]; then
     source ~/.bash_profile
+fi
+
+##################
+##### Profile ####
+##################
+if [[ -f ~/.bash_theme_oh_my_bash ]]; then
+    source ~/.bash_theme_oh_my_bash
 fi
 
 ##################
@@ -54,7 +61,6 @@ if [[ ! -L /tmp/.esd-${UID} ]]; then
         ln -s /tmp/.esd /tmp/.esd-${UID}
 fi
 
-#fortune chucknorris
-#echo
-export PATH=/home/anderson/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/sbin:/usr/local/scripts/
-export PATH=/home/anderson/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/sbin:/usr/local/scripts/
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

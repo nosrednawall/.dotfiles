@@ -20,6 +20,9 @@ case "$OS" in
   *)
     # caso nao seja, é o desktop
   	copyq &
+    # aplicar o brilho automatico
+    xrandr --output HDMI-1 --brightness 0.7
+    xrandr --output VGA-1 --brightness 0.7
   ;;
 
 esac

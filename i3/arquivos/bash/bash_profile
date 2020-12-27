@@ -19,3 +19,6 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export TERM=xterm-256color
 export COLORTERM=truecolor
 export COLORFGBG="15;0"
+
+# Java
+export JAVA_HOME="/usr/lib/jvm/java-11-oracle/"

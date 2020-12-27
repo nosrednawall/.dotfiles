@@ -71,8 +71,8 @@ let g:airline_theme='tender'
 
 let g:airline#extensions#tabline#formatter = 'default'
 " navegação entre os buffers
-nnoremap <C-h> :bnext<cr>
-nnoremap <C-l> :bprevious<cr>
+nnoremap <C-l> :bnext<cr>
+nnoremap <C-h> :bprevious<cr>
 nnoremap <C-x> :bp\|bd #<cr>
 
 " Control+P igual ao vscode
