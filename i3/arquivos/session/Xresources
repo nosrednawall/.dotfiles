@@ -89,7 +89,7 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 URxvt.transparent: true
-URxvt.shading: 20
+URxvt.shading: 25
 
 !! Common Keybinds for Navigations
 URxvt.keysym.M-k: command:\033]720;1\007
