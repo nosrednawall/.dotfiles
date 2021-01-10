@@ -67,7 +67,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0
-let g:airline_theme='tender'
+let g:airline_theme='atomic'
 
 let g:airline#extensions#tabline#formatter = 'default'
 " navegação entre os buffers
@@ -89,4 +89,5 @@ map cc <Plug>NERDCommenterInvert
 " Varificar de codigo
 let g:ale_linters = {'python': ['flake8', 'pylint'], 'javascript': ['eslint']}
 let g:ale_completion_enabled = 0 
+
 
