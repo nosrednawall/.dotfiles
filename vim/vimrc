@@ -60,7 +60,7 @@ set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 " Font para o nerdtree
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:style=Regular:h12
-set guifont=FantasqueSansMono\ Nerd\ Font\ Monoi:h12
+set guifont=DroidSansMono\ Nerd\ Font\ Monoi:h12
 
 " Airline
 set laststatus=2

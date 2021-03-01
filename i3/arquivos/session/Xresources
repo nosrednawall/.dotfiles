@@ -24,15 +24,15 @@
 *.color15:    #E6E6E6
 
 ! Fonts
-#define font1         FantasqueSansMono\ Nerd\ Font\ Mono
+#define font1         DroidSansMono\ Nerd\ Font\ Mono
 #define font2         Hack\ Nerd\ Font\ Mono
 #define font3         DejaVu\ Sans\ Mono\ Nerd\ Font
 #define font4         Noto\ Sans\ Mono\ CJK\ JP
 
-URxvt*font:           xft:font1:pixelsize=16, xft:font2:pixelsize=14:minspace=false, xft:font3:pixelsize=14,xft:font4:pixelsize=14
-URxvt*boldFont:       xft:font1:bold:pixelsize=16, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
-URxvt*italicFont:     xft:font1:italic:pixelsize=16, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
-URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=16, xft:font2:pixelsize=14:minspace=False, xft:font3:pixelsize=14, xft:font4:pixelsize=14
+URxvt*font:           xft:font1:pixelsize=12, xft:font2:pixelsize=12:minspace=false, xft:font3:pixelsize=10,xft:font4:pixelsize=10
+URxvt*boldFont:       xft:font1:bold:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=10,xft:font4:pixelsize=10
+URxvt*italicFont:     xft:font1:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=10,xft:font4:pixelsize=10
+URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False, xft:font3:pixelsize=10, xft:font4:pixelsize=10
 
 URxvt.letterSpace: 1
 URxvt.lineSpace: 0
