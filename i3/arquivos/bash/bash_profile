@@ -19,3 +19,14 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export TERM=xterm-256color
 export COLORTERM=truecolor
 export COLORFGBG="15;0"
+
+# Java
+export JAVA_HOME="/usr/lib/jvm/java-11-oracle/"
+
+# Java fx
+export PATH_TO_FX=/home/anderson/.local/share/libs/javafx/javafx-sdk-11.0.2/lib/
+export PATH_TO_FX_MODS=/home/anderson/.local/share/libs/javafx/javafx-jmods-11.0.2/
+
+# Go descompactado nessa pasta
+export PATH=$PATH:/usr/local/go/bin
+

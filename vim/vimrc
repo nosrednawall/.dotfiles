@@ -59,20 +59,25 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 " Font para o nerdtree
+<<<<<<< HEAD
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:style=Regular:h12
 set guifont=DroidSansMono\ Nerd\ Font\ Monoi:h12
+=======
+set guifont=DroidSansMono\ Nerd\ Font\ Mono:style=Regular:h12
+"set guifont=FantasqueSansMono\ Nerd\ Font\ Monoi:h12
+>>>>>>> 1f0929aaae817a5a9ff5e3966c51723f8ee2d633
 
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0
-let g:airline_theme='base16_twilight'
+let g:airline_theme='atomic'
 
 let g:airline#extensions#tabline#formatter = 'default'
 " navegação entre os buffers
-nnoremap <C-h> :bnext<cr>
-nnoremap <C-l> :bprevious<cr>
+nnoremap <C-l> :bnext<cr>
+nnoremap <C-h> :bprevious<cr>
 nnoremap <C-x> :bp\|bd #<cr>
 
 " Control+P igual ao vscode
@@ -89,4 +94,5 @@ map cc <Plug>NERDCommenterInvert
 " Varificar de codigo
 let g:ale_linters = {'python': ['flake8', 'pylint'], 'javascript': ['eslint']}
 let g:ale_completion_enabled = 0 
+
 

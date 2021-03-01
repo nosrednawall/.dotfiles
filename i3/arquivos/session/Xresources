@@ -23,18 +23,70 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+
+
+
+
+! special
+!*.foreground:   #c5c8c6
+!*.background:   #1d1f21
+!*.cursorColor:  #c5c8c6
+
+! black
+!*.color0:       #1d1f21
+!*.color8:       #969896
+
+! red
+!*.color1:       #cc342b
+!*.color9:       #cc342b
+
+! green
+!*.color2:       #198844
+!*.color10:      #198844
+
+! yellow
+!*.color3:       #fba922
+!*.color11:      #fba922
+
+! blue
+!*.color4:       #3971ed
+!*.color12:      #3971ed
+
+! magenta
+!*.color5:       #a36ac7
+!*.color13:      #a36ac7
+
+! cyan
+!*.color6:       #3971ed
+!*.color14:      #3971ed
+
+! white
+!*.color7:       #c5c8c6
+!*.color15:      #ffffff
+
 ! Fonts
+<<<<<<< HEAD
+=======
+!#define font1         FantasqueSansMono\ Nerd\ Font\ Mono
+>>>>>>> 1f0929aaae817a5a9ff5e3966c51723f8ee2d633
 #define font1         DroidSansMono\ Nerd\ Font\ Mono
 #define font2         Hack\ Nerd\ Font\ Mono
 #define font3         DejaVu\ Sans\ Mono\ Nerd\ Font
 #define font4         Noto\ Sans\ Mono\ CJK\ JP
 
+<<<<<<< HEAD
 URxvt*font:           xft:font1:pixelsize=12, xft:font2:pixelsize=12:minspace=false, xft:font3:pixelsize=10,xft:font4:pixelsize=10
 URxvt*boldFont:       xft:font1:bold:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=10,xft:font4:pixelsize=10
 URxvt*italicFont:     xft:font1:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False,xft:font3:pixelsize=10,xft:font4:pixelsize=10
 URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=12:minspace=False, xft:font3:pixelsize=10, xft:font4:pixelsize=10
+=======
+URxvt*font:           xft:font1:pixelsize=12, xft:font2:pixelsize=14:minspace=false, xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*boldFont:       xft:font1:bold:pixelsize=12, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*italicFont:     xft:font1:italic:pixelsize=12, xft:font2:pixelsize=14:minspace=False,xft:font3:pixelsize=14,xft:font4:pixelsize=14
+URxvt*boldItalicFont: xft:font1:bold:italic:pixelsize=12, xft:font2:pixelsize=14:minspace=False, xft:font3:pixelsize=14, xft:font4:pixelsize=14
+>>>>>>> 1f0929aaae817a5a9ff5e3966c51723f8ee2d633
 
-URxvt.letterSpace: 1
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 24
@@ -47,7 +99,7 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 URxvt.transparent: true
-URxvt.shading: 20
+URxvt.shading: 25
 
 !! Common Keybinds for Navigations
 URxvt.keysym.M-k: command:\033]720;1\007
