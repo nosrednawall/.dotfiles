@@ -10,6 +10,9 @@ export LANG=pt_BR.utf8
 export CHROME_BIN=/usr/bin/chromium
 export PATH=$PATH:/home/$USER/.local/bin
 
+# MPD
+export MPD_HOST=$HOME/.config/mpd/socket
+
 # QT5CT theme
 #export QT_STYLE_OVERRIDE=adwaita
 export QT_QPA_PLATFORMTHEME="qt5ct"
