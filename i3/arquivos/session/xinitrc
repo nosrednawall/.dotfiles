@@ -35,11 +35,30 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 sh .fehbg
-mpd &
-picom &
-#dwmblocks &
 
-export TZ=America/Sao_Paulo
+pkill -x mpd
+mpd ~/.config/mpd/config &
+
+pkill -x picom
+picom &
+
+pkill -x dunst
+dunst -conf ~/.config/dunst/dunstrc &
+
+pkill -x polybar
+#bash ~/.config/polybar/launch.sh  --forest
+
+pkill -x xautolock
+xautolock -time 10 -locker v3lock &
+
+# mount pendrives
+dbus-launch
+
+xfce4-clipman &
+kdeconnect-indicator &
+
+wal -i "$HOME/.wallpaper.png" -o wal-set
+
 #Teclado em pt-br
 setxkbmap -model abnt2 -layout br -variant abnt2
 
@@ -49,7 +68,6 @@ xrdb -merge ~/.Xresources
 
 # Multi monitor
 xrandr --output VGA-1 --mode 1600x900 --pos 0x180 --rotate normal --output DVI-D-1 --off --output HDMI-1 --mode 2560x1080 --pos 1600x0 --rotate normal
+
 #Iniciar o i3
 exec i3 
-#exec dwm
-#exec bspwm
