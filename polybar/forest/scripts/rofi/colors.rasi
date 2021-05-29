@@ -1,0 +1,25 @@
+/* colors */
+/* original
+* {
+  al:   #00000000;
+  bg:   #212B30FF;
+  bga:  #263035FF;
+  fg:   #C4C7C5FF;
+  ac:   #EC407AFF;
+  se:   #4DD0E1FF;
+}
+*/
+* {
+  al:   #00000000;
+  bg:   #282a36FF;
+  bga:  #6272a4FF;
+  fg:   #f8f8f2FF;
+  ac:   #ff5555FF;
+  se:   #4DD0E1FF;
+}
+/*
+   foreground: #f8f8f2;
+    background-color: #282a36;
+    active-background: #6272a4;
+    urgent-background: #ff5555;
+*/
