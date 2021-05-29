@@ -71,3 +71,4 @@ xrandr --output VGA-1 --mode 1600x900 --pos 0x180 --rotate normal --output DVI-D
 
 #Iniciar o i3
 exec i3 
+# exec dwm
